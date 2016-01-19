@@ -25,7 +25,15 @@
 
         <service android:name=".service.MyService" />
 
-        <activity android:name=".service.MainServiceActivity"></activity>
+        <activity android:name=".service.MainServiceActivity" />
+
+        <service
+            android:name=".service.DownLoadService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.DownLoadIntentService"
+            android:exported="false"></service>
     </application>
 
 </manifest>

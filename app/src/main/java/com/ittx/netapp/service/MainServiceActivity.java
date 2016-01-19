@@ -13,7 +13,7 @@ import android.widget.Button;
 import com.ittx.netapp.R;
 
 public class MainServiceActivity extends AppCompatActivity {
-    private Button mStartBtn, mStopBtn, mBindBtn, mGetCountBtn;
+    private Button mStartBtn, mStopBtn, mBindBtn, mGetCountBtn,mDownLoadOneBtn,mDownLoadTwoBtn;
     private MyService.IBinderMyService mIBinderMyService;
     private ServiceConnection connection = new ServiceConnection() {
         @Override
@@ -38,6 +38,8 @@ public class MainServiceActivity extends AppCompatActivity {
         mStopBtn = (Button) findViewById(R.id.service_stop_btn);
         mBindBtn = (Button) findViewById(R.id.service_bindservice_btn);
         mGetCountBtn = (Button) findViewById(R.id.service_getcount_btn);
+        mDownLoadOneBtn = (Button) findViewById(R.id.service_donwload1_btn);
+        mDownLoadTwoBtn = (Button) findViewById(R.id.service_donwload2_btn);
 
         mStartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +68,23 @@ public class MainServiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mGetCountBtn.setText("" + mIBinderMyService.getCount());
+            }
+        });
+
+        mDownLoadOneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainServiceActivity.this,DownLoadIntentService.class);
+                intent.putExtra("FILE_NAME","文件1");
+                startService(intent);
+            }
+        });
+        mDownLoadTwoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainServiceActivity.this,DownLoadIntentService.class);
+                intent.putExtra("FILE_NAME","文件2");
+                startService(intent);
             }
         });
     }

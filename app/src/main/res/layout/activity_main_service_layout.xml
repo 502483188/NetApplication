@@ -26,4 +26,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="获取计数"/>
+
+    <Button
+        android:id="@+id/service_donwload1_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下载文件1"/>
+
+    <Button
+        android:id="@+id/service_donwload2_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下载文件2"/>
 </LinearLayout>
