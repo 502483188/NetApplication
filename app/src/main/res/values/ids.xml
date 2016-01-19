@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="list_icon_img" type="id"/>
+    <item name="list_name_txt" type="id"/>
+    <item name="list_coupe_txt" type="id"/>
+    <item name="list_distance_txt" type="id"/>
+    <item name="list_location_txt" type="id"/>
+    <item name="list_card_img" type="id"/>
+    <item name="list_group_img" type="id"/>
+    <item name="list_ticket_img" type="id"/>
+
+    <item name="slider_imager" type="id"/>
+
+    <item name="list_two_icon1_img" type="id"/>
+    <item name="list_two_icon2_img" type="id"/>
+    <item name="list_two_icon3_img" type="id"/>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@id/list_icon_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@id/list_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/list_icon_img"
+        android:text="瑞庭竹岛酒店"
+        android:singleLine="true"
+        android:textColor="@android:color/background_dark" />
+
+    <TextView
+        android:id="@id/list_coupe_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_name_txt"
+        android:textSize="14sp"
+        android:layout_toRightOf="@id/list_icon_img"
+        android:text="网上预定入住可享返现优惠"
+        android:singleLine="true"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <TextView
+        android:id="@id/list_distance_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textSize="14sp"
+        android:drawableLeft="@mipmap/info_map"
+        android:text="2.0k"
+        android:textColor="@android:color/tab_indicator_text" />
+
+    <TextView
+        android:id="@id/list_location_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/list_distance_txt"
+        android:layout_toRightOf="@id/list_icon_img"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:text="四川省成都市高新区老成仁路8号成都市高新区老成都市高新区老成都市高新区老成都市高新区老"
+        android:textColor="@android:color/tab_indicator_text" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@id/list_card_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/near_card" />
+
+        <ImageView
+            android:id="@id/list_group_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/list_card_img"
+            android:src="@mipmap/near_group" />
+
+        <ImageView
+            android:id="@id/list_ticket_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/near_ticket"
+            android:layout_toRightOf="@id/list_group_img"/>
+    </RelativeLayout>
+</RelativeLayout>
