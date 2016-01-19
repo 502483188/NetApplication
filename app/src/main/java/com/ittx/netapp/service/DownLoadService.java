@@ -14,6 +14,7 @@ import android.util.Log;
  */
 public class DownLoadService extends Service {
     private MyHandler mHandler;
+    private Looper mLooper;
     public class MyHandler extends Handler {
         public MyHandler(Looper looper) {
             super(looper);
@@ -39,8 +40,8 @@ public class DownLoadService extends Service {
         HandlerThread handlerThread = new HandlerThread("DownLoadThread");
         handlerThread.start();
 
-        Looper looper = handlerThread.getLooper();
-        mHandler = new MyHandler(looper);
+        mLooper = handlerThread.getLooper();
+        mHandler = new MyHandler(mLooper);
     }
 
     @Override
@@ -62,6 +63,7 @@ public class DownLoadService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        mLooper.quit();
         Log.e("tag","onDestroy >>>");
     }
 }
