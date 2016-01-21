@@ -65,7 +65,7 @@ public class MusicListActivity extends Activity implements OnItemClickListener{
 					scanFileList(file);
 				} else {
 					//file://music/p/xx.mp3
-					if (file.getName().endsWith("mp3")) {
+					if (file.getName().endsWith(".mp3")) {
 						MusicBean music = new MusicBean();
 						String fileName = file.getName();
 						music.setMusicName(fileName.substring(0, fileName.length()-".mp3".length()));
@@ -119,17 +119,17 @@ public class MusicListActivity extends Activity implements OnItemClickListener{
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
-		/*Intent intent = new Intent(this,MusicActivity.class);
+		Intent intent = new Intent(this,MP3Activity.class);
 		intent.putParcelableArrayListExtra("MUSIC_LIST", mMusicList);
 		intent.putExtra("CURRENT_POSTION", position);
 		
-		startActivity(intent);*/
+		startActivity(intent);
 
-		MusicBean musicBean = (MusicBean) parent.getAdapter().getItem(position);
+		/*MusicBean musicBean = (MusicBean) parent.getAdapter().getItem(position);
 
 		Intent intent = new Intent(this,MP3Activity.class);
 		intent.putExtra("MUSIC_BENA",musicBean);
-		startActivity(intent);
+		startActivity(intent);*/
 		
 	}
 }

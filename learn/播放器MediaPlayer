@@ -1,0 +1,38 @@
+一、播放器MediaPlayer
+    1. MediaPlayer状态图
+        IDLE  <-    reset() 或  new MediaPlayer()
+
+        Inint初始化  <- setDataSource()
+
+        Prepare      <-  prepare()
+
+        Start        <-  start()
+
+        pause        <-  pause()
+
+        onCompleteListner
+
+        seekto(int)
+
+        End  <- release()
+
+    2.播放进度和时间
+
+      SeekBar
+          setMax(int)     setProgress(int)    自定义
+
+          getDuration()   getCurrentPosition()
+
+      SimpleDateFormat
+
+    3. Handler消息机制优化  内存溢出
+
+二、Android文件存储
+    内部存储    data/data/com.xx/files    getFiledirs()
+                                /caches   getCacheDir()
+    外部存储    私有区域   /sdcard/Android/com.xx/files
+                公共区域   /sdcard/
+
+    遍历文件系统    File.listFiles[]    isDirectory（） 文件目录
+
+    Activity传参   对象 区别
