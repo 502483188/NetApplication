@@ -4,7 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
       android:background="@drawable/player_bg_bar" >
-
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/music_scan_local_butn"
+        android:text="扫描本地歌曲"/>
     <ListView
         android:id="@+id/music_list_view"
         android:layout_width="match_parent"

@@ -10,7 +10,7 @@
 
         pause        <-  pause()
 
-        onCompleteListner
+        onCompleteListner()
 
         seekto(int)
 
@@ -33,6 +33,6 @@
     外部存储    私有区域   /sdcard/Android/com.xx/files
                 公共区域   /sdcard/
 
-    遍历文件系统    File.listFiles[]    isDirectory（） 文件目录
+    遍历文件系统    File.listFiles[]    isDirectory() 文件目录
 
     Activity传参   对象 区别
