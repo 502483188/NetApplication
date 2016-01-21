@@ -3,7 +3,7 @@
     package="com.ittx.netapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,7 +33,11 @@
             android:exported="true" />
         <service
             android:name=".service.DownLoadIntentService"
-            android:exported="false"></service>
+            android:exported="false" />
+
+        <activity android:name=".mp3.MP3Activity"></activity>
+        <activity android:name=".mp3.MusicCursorListActivity"></activity>
+        <activity android:name=".mp3.MusicListActivity"></activity>
     </application>
 
 </manifest>
